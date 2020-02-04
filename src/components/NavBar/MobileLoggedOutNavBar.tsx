@@ -22,9 +22,7 @@ const MobileLoggedOutNavBar: React.FC<Props> = (props: Props) => {
             <span className={styles.logoText}>Fiklin</span>
           </Menu.Item>
           <Menu.Item position="right">
-            <Menu.Item>
-              <LoginModal />
-            </Menu.Item>
+            <LoginModal />
           </Menu.Item>
         </Menu>
         <div style={{ marginTop: '48px' }}>{children}</div>

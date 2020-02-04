@@ -14,9 +14,8 @@ export interface Props {
 
 const MobileLoggedInNavBar: React.FC<Props> = (props: Props) => {
   const { children } = props;
+  const { activeItem, handleItemClick }: any = useContext(ActiveNavContext);
 
-  const { activeItem, handleItemClick, visible, toggleVisible }: any = useContext(ActiveNavContext);
-  console.log('Active Item is: ', activeItem);
   return (
     <>
       <Responsive getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
@@ -25,11 +24,6 @@ const MobileLoggedInNavBar: React.FC<Props> = (props: Props) => {
             <span className={styles.logoText}>Fiklin</span>
           </Menu.Item>
           <Menu.Item position="right" className={styles.menuItem}>
-            {activeItem && activeItem.includes('dashboard') ? (
-              <Menu.Item onClick={toggleVisible} style={{ padding: '0px' }}>
-                <Icon name={visible ? 'close' : 'bars'} size="large" style={{ margin: 'auto' }} />
-              </Menu.Item>
-            ) : null}
             <Menu.Item className={styles.menuItem} style={{ paddingRight: '0px', paddingLeft: '0px' }}>
               <UserAvatarDropdown />
             </Menu.Item>

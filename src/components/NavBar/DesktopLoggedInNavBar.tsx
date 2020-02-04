@@ -26,19 +26,6 @@ const DesktopLoggedOutNavBar: React.FC<Props> = (props: Props) => {
         <Menu.Item position="right">
           <Menu.Item
             as={Link}
-            to={routes.EVENTS}
-            name="events"
-            className={
-              activeItem === 'events'
-                ? `${styles.menuItem} ${styles.menuItemItem} ${styles.active}`
-                : `${styles.menuItem} ${styles.menuItemItem}`
-            }
-            onClick={handleItemClick}
-          >
-            Events
-          </Menu.Item>
-          <Menu.Item
-            as={Link}
             to={routes.TOURS}
             name="tours"
             className={

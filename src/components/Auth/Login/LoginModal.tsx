@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect, useContext } from 'react';
-import { Divider, Button, Form, Icon, Modal, Message, Responsive } from 'semantic-ui-react';
+import { Divider, Button, Form, Icon, Modal, Message } from 'semantic-ui-react';
 import { withRouter, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { History } from 'history';
@@ -8,8 +8,6 @@ import { useMutation } from '@apollo/react-hooks';
 import { SIGN_IN } from '../../../GraphQl/Mutations/Auth';
 import AuthContext from '../../../context/AuthContext/authContext';
 import AuthModalContext from '../../../context/AuthModalContext/authModalContext';
-import getWidth from '../../../utils/getWidth';
-import { TiUserOutline } from 'react-icons/ti';
 import styles from './Login.module.scss';
 import SignUpModal from '../SignUp/SignUpModal';
 
@@ -82,14 +80,10 @@ const LoginModal: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Button className={styles.authButton} onClick={openLoginModal}>
-          Sign In
-        </Button>
-      </Responsive>
-      <Responsive getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
-        <TiUserOutline className={styles.userIcon} onClick={openLoginModal} />
-      </Responsive>
+      <Button className={styles.authButton} onClick={openLoginModal}>
+        Sign In
+      </Button>
+
       {/* Sign up modal placed here */}
       <SignUpModal />
       {/* Sign up modal placed here */}

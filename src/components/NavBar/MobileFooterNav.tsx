@@ -32,16 +32,6 @@ const MobileFooterNav: React.FC = () => {
         </Menu.Item>
         <Menu.Item
           as={Link}
-          to={routes.EVENTS}
-          name="events"
-          className={activeItem === 'events' ? `${styles.bNavActive}` : `${styles.bNav}`}
-          onClick={handleItemClick}
-        >
-          <Icon name="calendar alternate" className={styles.icon} />
-          Events
-        </Menu.Item>
-        <Menu.Item
-          as={Link}
           to={routes.TOURS}
           name="tours"
           className={activeItem === 'tours' ? `${styles.bNavActive}` : `${styles.bNav}`}

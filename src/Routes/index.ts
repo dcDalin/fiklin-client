@@ -1,10 +1,5 @@
 export const HOME = '/';
 export const AUTH = '/auth/:id';
-export const EVENTS = '/events';
 export const TOURS = '/tours';
 export const TICKE_RESALE = '/ticket-resale';
 export const LOGOUT = '/logout';
-export const DASHBOARD = '/dashboard';
-export const SUMMARY = '/summary';
-export const TEAM = '/team';
-export const PROFILE = '/profile';
